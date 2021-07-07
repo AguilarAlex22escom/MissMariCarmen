@@ -1,0 +1,12 @@
+
+/* Media Quieries utilizadas */
+
+@media screen and (max-width: 800px) {
+    nav {
+        height: 3em;
+    }
+    
+    nav a {
+        font-size: 0.8em;
+    }
+}

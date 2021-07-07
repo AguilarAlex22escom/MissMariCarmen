@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul: #BE96FF;
+    --azulAl20: #9772D7;
+    --azulAl40: #714FB0;
+    --azulAl60: #714FB0;
+    --azulAl80: #4C2E8B;
+    --verdeOscuro: #006F5C;
+    --azulMarino: #301770;
+    --morado: #FF8EE1;
+    --rosa: #FF94B4;
+    --salmón: #FF846B;
+    --naranja: #D3A30A;
+    --amarillo: #F9F871;
+    --blanco: #FDF7FF;
+    --gris: #222222;
+    --sombra1: 0 0 1.5rem #181818;
+    --sombra2: 0.5rem 0.5rem 0.5rem #181818;
+}
+
+/* Scroll */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    background-color: var(--azulAl60);
+    padding: 1.5em;
+    margin: 1.5em;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-image: linear-gradient( to left, var(--azulAl60), var(--azulAl20));
+    padding: 1.5rem;
+    border-radius: 1.5em;
+    border: 0.3rem solid var(--azulAl60);
+}
+
+/* Barra de navegación */
+
+nav {
+    width: 100%;
+    height: 5em;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 1.5rem;
+    background-color: var(--blanco);
+    box-shadow: var(--sombra1);
+    overflow: hidden;
+}
+
+nav a {
+    color: var(--azulAl80);
+    font-size: 1.5em;
+    font-weight: normal;
+    font-family: 'Roboto';
+    text-decoration: none;
+    transition: all 0.5s ease-in;
+    animation: desplazarAbajo 0.5s ease-in;
+}
+
+nav a:hover {
+    color: var(--azulAl40);
+}
+
+/* Pantalla de inicio */
+
+.contenedor {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to left, var(--azulAl60), var(--rosa));
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    color: var(--blanco);
+    font-size: 4em;
+    font-family: 'Roboto';
+    animation: desplazarALaIzquierda 1s ease-in;
+}
+
+header figure {
+    min-width: 25em;
+    width: 40%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+header figure img {
+    width: 100%;
+    padding: 2rem;
+    /* animation: aumentarTamaño 1s ease-in; */
+}
+
+header figure a {
+    width: 100%;
+    font-size: 1.2rem;
+    font-family: 'Roboto';
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem;
+    color: var(--blanco);
+    animation: aumentarTamaño 1s ease-in;
+}
+
+/* Apartados */
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+section h1 {
+    width: 40%;
+    margin: auto;
+    font-family: 'Roboto';
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+}
+
+section aside {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+section aside figure {
+    width: 90%;
+    margin: auto 5%;
+}
+
+section aside figure img {
+    width: 80%;
+    margin: 1.2rem 10%;
+}
+
+section aside figure a {
+    width: 100%;
+    font-family: 'Roboto';
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+section aside p {
+    width: 90%;
+    margin: 1.2rem 5%;
+    text-align: justify;
+    font-size: 1.2rem;
+    font-family: 'Roboto';
+}
+
+section aside ul {
+    width: 90%;
+}
+
+section aside ul li {
+    padding: 0.2rem;
+    font-size: 1.2rem;
+    font-family: 'Roboto';
+    text-decoration: none;
+    list-style: none;
+}
+
+section article {
+    width: 25%;
+}
+
+/* Efecto Parrallax */
+
+.parallax {
+    background-color: #fff;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Animaciones aplicadas */
+
+@keyframes desplazarAbajo {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes desplazarALaIzquierda {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes desplazarALaDerecha {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes aumentarTamaño {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(100%);
+    }
+}

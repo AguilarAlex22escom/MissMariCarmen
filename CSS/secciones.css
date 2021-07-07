@@ -1,0 +1,93 @@
+:root {
+    --azul: #BE96FF;
+    --azulAl20: #9772D7;
+    --azulAl40: #714FB0;
+    --azulAl60: #714FB0;
+    --azulAl80: #4C2E8B;
+    --verdeOscuro: #006F5C;
+    --azulMarino: #301770;
+    --morado: #FF8EE1;
+    --rosa: #FF94B4;
+    --salmón: #FF846B;
+    --naranja: #D3A30A;
+    --amarillo: #F9F871;
+    --blanco: #FDF7FF;
+    --gris: #222222;
+    --sombra1: 0 0 1.5rem #181818;
+    --sombra2: 0.5rem 0.5rem 0.5rem #181818;
+}
+
+#ayuda {
+    background-color: var(--blanco);
+    flex-direction: row-reverse;
+}
+
+#ayuda h1 {
+    color: var(--gris);
+}
+
+#ayuda aside figure a {
+    color: var(--azulMarino);
+}
+
+#ayuda aside ul li {
+    color: var(--gris);
+    text-align: left;
+}
+
+#servicios {
+    background-color: var(--verdeOscuro);
+}
+
+#servicios h1 {
+    color: var(--blanco);
+}
+
+#servicios aside figure a {
+    color: var(--naranja);
+}
+
+#sevicios aside p {
+    color: var(--blanco);
+    text-align: right;
+}
+
+#servicios aside ul li {
+    color: var(--blanco);
+    text-align: right;
+}
+
+#padres {
+    background-color: var(--blanco);
+    flex-direction: row-reverse;
+}
+
+#padres h1 {
+    color: var(--gris);
+}
+
+#padres aside figure a {
+    color: var(--azulMarino);
+}
+
+#padres aside ul li {
+    color: var(--gris);
+    text-align: left;
+}
+
+#experiencia {
+    background-color: var(--azulAl80);
+}
+
+#experiencia h1 {
+    color: var(--blanco);
+}
+
+#contacto {
+    background-color: var(--gris);
+    flex-direction: row;
+}
+
+#contacto h1 {
+    color: var(--naranja);
+} 
